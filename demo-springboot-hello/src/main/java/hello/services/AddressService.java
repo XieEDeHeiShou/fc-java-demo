@@ -1,15 +1,16 @@
 package hello.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import hello.entities.Address;
+import org.springframework.stereotype.Service;
 
 @Service
 public class AddressService {
-    @Autowired
-    private Address address;
-    
+    private final Address address;
+
+    public AddressService(Address address) {
+        this.address = address;
+    }
+
     public void show() {
         System.out.println("Address: " + address);
     }
