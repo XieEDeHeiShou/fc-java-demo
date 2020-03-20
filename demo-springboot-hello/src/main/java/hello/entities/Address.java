@@ -6,11 +6,11 @@ import org.springframework.stereotype.Component;
 public class Address {
     private String country;
     private String city;
-    
-    public Address () {
+
+    public Address() {
         System.out.println(this.getClass() + "----Init");
     }
-    
+
     public String getCountry() {
         return country;
     }
